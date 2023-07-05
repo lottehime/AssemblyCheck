@@ -22,17 +22,17 @@ Usage
 References
 -------
 Because the logging for target is not exactly advertised well:
--[PSM Docs](https://psm.playstation.net/static/general/all/unity_for_psm/en/Documentation/Manual/PSMPsmDevice.html)
+- [PSM Docs](https://psm.playstation.net/static/general/all/unity_for_psm/en/Documentation/Manual/PSMPsmDevice.html)
 
 -------
 Tested Build Info
 -------
-Version: 4.3.4
-Runtime Version: 4.3.4.2
-Build: 4.3.4f1 (8129b852afe7
+- Version: 4.3.4
+- Runtime Version: 4.3.4.2
+- Build: 4.3.4f1 (8129b852afe7
 
 -------
 Help
 -------
 
--[Yifan](https://twitter.com/yifanlu) for being the hammer when all he had was my slow ass for a nail.
+- [Yifan](https://twitter.com/yifanlu) for being the hammer when all he had was my slow ass for a nail.

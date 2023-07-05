@@ -50,6 +50,10 @@ public class AssemblyCheck : MonoBehaviour
 		Debug.Log("Unmanaged memory was disposed.");
 		
 		// Check loaded assemblies and print to debug console
-		var assemblies = AppDomain.CurrentDomain.GetAssemblies(); foreach (var assem in assemblies) { Debug.Log(assem.FullName); }
+		var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+		foreach (var assem in assemblies)
+		{
+			Debug.Log(assem.FullName);
+		}
 	}
 }

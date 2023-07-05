@@ -2,7 +2,7 @@
 AssemblyCheck
 -------
 
-Simple drop in file to print assemblies and info + check security critical and output to console and or log file.
+Simple drop in file to print PlayStation Mobile Unity assemblies and info + check security critical and output to console and or log file.
 
 -------
 Usage

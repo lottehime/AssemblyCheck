@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 public class GameScore : MonoBehaviour
 {
@@ -20,9 +21,34 @@ public class GameScore : MonoBehaviour
 			return instance;
 		}
 	}
-
+	
+	// Jam our tests in here
 	void Start ()
 	{
+		// Check for ability to call security critical method via Marshal.ReadByte
+
+		// Allocate 1 byte of unmanaged memory.
+		IntPtr hGlobal = new IntPtr(0xB00BCAFE);
+		
+		// Create a new byte. 
+		byte b = 1;
+		
+		Console.WriteLine("Byte written to unmanaged memory: " + b);
+		
+		// Write the byte to unmanaged memory.
+		Marshal.WriteByte(hGlobal, b);
+		
+		// Read byte from unmanaged memory. 
+		byte c = Marshal.ReadByte(hGlobal);
+		
+		Console.WriteLine("Byte read from unmanaged memory: " + c);
+		
+		// Free the unmanaged memory.
+		Marshal.FreeHGlobal(hGlobal);
+		
+		Debug.Log("Unmanaged memory was disposed.");
+		
+		// Check loaded assemblies and print to debug console
 		var assemblies = AppDomain.CurrentDomain.GetAssemblies(); foreach (var assem in assemblies) { Debug.Log(assem.FullName); }
 	}
 		
@@ -99,7 +125,6 @@ public class GameScore : MonoBehaviour
 	{
 		if (Instance == null)
 		{
-			var assemblies = AppDomain.CurrentDomain.GetAssemblies(); foreach (var assem in assemblies) { Debug.Log(assem.FullName); }
 			Debug.Log ("Game score not loaded");
 			return;
 		}

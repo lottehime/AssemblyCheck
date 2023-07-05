@@ -23,6 +23,7 @@ References
 -------
 Because the logging for target is not exactly advertised well:
 - [PSM Docs](https://psm.playstation.net/static/general/all/unity_for_psm/en/Documentation/Manual/PSMPsmDevice.html)
+- [PSM Docs (.html archived in repo)](https://github.com/joshaxey/AssemblyCheck/blob/master/doc/Unity%20-%20About%20PsmDeviceForUnity.exe.html)
 
 -------
 Tested Build Info
